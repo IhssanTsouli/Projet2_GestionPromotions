@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PromotionsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +15,4 @@ use App\Http\Controllers\PromotionsController;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::controller(PromotionsController::class)->group(function() {
-    Route::get('/', 'index');
-    Route::get('/create', 'create');
-    Route::post('/promotion', 'store');
 });
