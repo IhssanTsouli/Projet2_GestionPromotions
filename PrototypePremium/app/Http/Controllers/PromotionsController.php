@@ -52,7 +52,27 @@ class PromotionsController extends Controller
         $todelete->delete();
         return redirect(route('promotions.index'));
     }
-    
 
+    public function search(Request $request){
+        
+            $output="";
+            $promotions=Promotion::where('title','LIKE','%'.$request->search."%")->get();
+            
+                foreach($promotions as $promotion){
+                    $output.='<tr>
+            <td> '.$promotion->title.' </td>
+           
+            <td>'.'<a href="/promotions/'.$promotion['id'].'/edit">'.'<button>update</button></a>'.'</td>
+            <td>'.'<form method="post" action="'.route('promotions.destroy',$promotion->id ).'">
+            <input type="hidden" name="_method" value="Delete">
+            <input type="hidden" name="_token" value="'. csrf_token() .'">
+                <button type="submit" >Delete</button>
+            </form>'.'</td>
+            </tr>';
+                   
+                }
+                return response($output);
 
-}
+            }
+        }
+
