@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800&display=swap');
+*{
+    font-family: 'Tajawal', sans-serif;
+    outline: none;
+
+}
+body{
+    
+    justify-content: center;
+    align-items: center;
+
+}
+.center{
+    width: 70%;
+    margin-left: 15%;
+}
+.table{
+    border: 4px solid #000000;
+   
+}
+.inp{
+    border: 4px solid #1398f7;
+    border-radius: 7px;
+    outline: none;
+   
+}
+input{
+    border: 4px solid #1398f7;
+    border-radius: 7px;
+    outline: none;
+    width: 100%;
+}
+/* ======================================================= */
+
+.tit{
+    text-align: center;
+}
+
+
+/* =============================================================== */
+
+.card-1{
+    background-color: #ededed;
+    height: 550px;
+    width: 400px;
+    display: flex;
+    border-radius: 10px;
+    
+}

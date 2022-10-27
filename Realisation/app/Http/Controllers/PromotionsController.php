@@ -57,7 +57,7 @@ class PromotionsController extends Controller
     public function search(Request $request){
         
             $output="";
-            $promotions=Promotion::where('name','LIKE','%'.$request->search."%")->get();
+            $promotions=Promotion::where('name','LIKE','%'.$request->searchValue."%")->get();
             
                 foreach($promotions as $promotion){
                     $output.='<tr>

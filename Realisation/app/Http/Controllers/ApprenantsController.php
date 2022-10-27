@@ -66,10 +66,10 @@ class ApprenantsController extends Controller
      */
     public function edit($id)
     {
-        $index=Apprenant::findOrFail($id);
+        $idApprenant=Apprenant::findOrFail($id);
 
         return view('promotions.editApprenant',[
-            'apprenant'=>$index
+            'apprenant'=>$idApprenant
         ]);
     }
 

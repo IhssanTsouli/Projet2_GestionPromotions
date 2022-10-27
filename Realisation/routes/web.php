@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::resource('promotions',PromotionsController::class);
-Route::get('/search',[PromotionsController::class,'search']);
+Route::get('/routesearch',[PromotionsController::class,'search']);
 
 Route::resource('gestionstud',ApprenantsController::class);
 
